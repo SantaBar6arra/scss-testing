@@ -1,0 +1,8 @@
+<div class="blocks">
+  @for (class of blocksClasses; track $index) {
+    <div class="{{class}}">block that should be visible at {{ class }}</div>
+  }
+</div>
+
+
+<router-outlet />

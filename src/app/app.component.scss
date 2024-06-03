@@ -1,0 +1,29 @@
+$sizes: (
+  xs: 320px,
+  s: 768px,
+  m: 1024px,
+  l: 1440px,
+  xl: 1920px
+);
+
+.blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
+[class^="visible-"] {
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid red;
+  display: none;
+}
+
+@each $size, $value in $sizes {
+  @media (min-width: $value) {
+    .visible-#{$size} {
+      display: block;
+    }
+  }
+}
